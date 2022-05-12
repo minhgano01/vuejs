@@ -13,17 +13,34 @@
     <div class="container">
         <h1 class="text-center">Chapter 1</h1>
 
-        <section id="interpolation" class="bg-dark p-3 text-center mt-5 text-light">
+        <section id="interpolation" class="bg-dark rounded p-3 text-center mt-5 text-light">
             <h2>interpolation</h2>
             <hr>
             <p>Tên: {{nameUser}} </p>
             <p>Lớp: {{className}} </p>
         </section>
 
-        <section id="bind-attribute" class="bg-dark p-3 text-center mt-5 text-light">
+        <section id="bind-attribute" class="bg-dark rounded p-3 text-center mt-5 text-light">
             <h2>bind-attribute</h2>
             <hr>
-            <img src="" alt="cat">
+            <img class="img-thumbnail" v-bind:src=imgURL alt="cat">
+            <a class="btn btn-info mt-3" v-bind:href="linkCser">
+                Cser
+            </a>
+        </section>
+
+        <section id="methods" class="bg-dark rounded p-3 text-center mt-5 text-light">
+            <h2>methos</h2>
+            <hr>
+            <h3>Kết quả: {{resuflt()}}</h3>
+        </section>
+
+        <section id="raw-html" class="bg-dark rounded p-3 text-center mt-5 text-light">
+            <h2>raw-html</h2>
+            <hr>
+            <div v-html="message">
+
+            </div>
         </section>
 
     </div>
