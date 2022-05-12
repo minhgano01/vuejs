@@ -38,10 +38,25 @@
         <section id="raw-html" class="bg-dark rounded p-3 text-center mt-5 text-light">
             <h2>raw-html</h2>
             <hr>
-            <div v-html="message">
+            <div v-html="message"></div>
+        </section>
 
+        <section id="events" class="bg-dark rounded p-3 text-center mt-5 text-light">
+            <h2>events</h2>
+            <hr>
+            <p>Kết quả: {{count}} </p>
+            <button class="btn btn-info" v-on:click="handleClick(10)">Click me!</button>
+            <form @submit.prevent="handleSubmit()">
+                <button type="submit" class="btn btn-warning mt-3">Submit</button>
+            </form>
+            <div class="form-group mt-3">
+                <label>Tài khoản</label>
+                <input type="text" class="form-control" placeholder="Nhập tài khoản ..." @keyup.enter="handleEnter()">
+                <label for="">Mật khẩu</label>
+                <input type="text" class="form-control" placeholder="Nhập mật khẩu ..." @keyup.enter="handleEnter()">
             </div>
         </section>
+
 
     </div>
 

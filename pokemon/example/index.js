@@ -43,3 +43,23 @@ Vue.createApp({
         }
     }
 }).mount("#raw-html")
+
+Vue.createApp({
+    data() {
+        return {
+            count: 0
+        }
+    },
+    methods: {
+        handleClick(pram) {
+            this.count = this.count + pram
+            return this.count
+        },
+        handleSubmit() {
+            alert("Submit sussess!")
+        },
+        handleEnter() {
+            alert("Login sussess!")
+        },
+    }
+}).mount("#events")
