@@ -57,6 +57,28 @@
             </div>
         </section>
 
+        <section id="tow_way_binding" class="bg-dark rounded p-3 text-center mt-5 text-light">
+            <h2>tow_way_binding</h2>
+            <hr>
+            <div>
+                <form class="form-group" type="Submit">
+                    <input v-model="message" type="text" class="form-control">
+                </form>
+                <div>
+                    <p class="alert alert-danger">Massage: {{message}}</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="computed_and_watch" class="bg-dark rounded p-3 text-center mt-5 text-light">
+            <h2>computed_and_watch</h2>
+            <hr>
+            <div>
+                <p> Number: {{ num }} </p>
+                <button class="btn btn-warning mb-2" @click="handelIncrea">Increa</button>
+                <p class="alert alert-primary">Full name: {{ handleScanName }} </p>
+            </div>
+        </section>
 
     </div>
 

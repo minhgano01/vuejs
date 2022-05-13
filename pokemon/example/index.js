@@ -63,3 +63,36 @@ Vue.createApp({
         },
     }
 }).mount("#events")
+
+Vue.createApp({
+    data() {
+        return {
+            message: ""
+        }
+    },
+}).mount("#tow_way_binding")
+
+Vue.createApp({
+    data() {
+        return {
+            num: 0,
+            fisrtName: "Hà",
+            lastName: "Công Minh",
+        }
+    },
+    computed: {
+        handleScanName() {
+            return this.fisrtName + " " + this.lastName
+        }
+    },
+    methods: {
+        handelIncrea() {
+            return this.num += 1
+        }
+    },
+    wacth: {
+        num() {
+            console.log("succsess")
+        }
+    }
+}).mount("#computed_and_watch")
