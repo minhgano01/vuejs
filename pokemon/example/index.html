@@ -78,6 +78,16 @@
                 <button class="btn btn-warning mb-2" @click="handelIncrea">Increa</button>
                 <p class="alert alert-primary">Full name: {{ handleScanName }} </p>
             </div>
+            <hr>
+            <div>
+                <form class="form-group">
+                    <label class="text-light">Họ</label>
+                    <input class="form-control" type="text" v-model="fisrtName">
+                    <label class="text-light">Tên</label>
+                    <input class="form-control" type="text" v-model="lastName">
+                </form>
+                <p class="alert alert-succsess">Họ và tên: {{ fullName }}</p>
+            </div>
         </section>
 
     </div>

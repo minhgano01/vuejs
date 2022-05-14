@@ -78,7 +78,20 @@ Vue.createApp({
             num: 0,
             fisrtName: "Hà",
             lastName: "Công Minh",
+            fullName: "",
         }
+    },
+    wacth: {
+        num(newValue, oldValue) {
+            console.log(newValue)
+            console.log(oldValue)
+        },
+        fisrtName(newValue) {
+            this.fullName = newValue + " " + this.lastName
+        },
+        lastName(newValue) {
+            this.fullName = this.fisrtName + " " + newValue
+        },
     },
     computed: {
         handleScanName() {
@@ -90,9 +103,5 @@ Vue.createApp({
             return this.num += 1
         }
     },
-    wacth: {
-        num() {
-            console.log("succsess")
-        }
-    }
+
 }).mount("#computed_and_watch")
